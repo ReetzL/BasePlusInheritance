@@ -14,9 +14,29 @@ package com.mycompany.baseplus;
 
 // Question 9.3
 public class BasePlusCommissionEmployeeTest {
-   public static void main(String[] args) {
+    public static void main(String[] args) {
+        //9.15 question
+        HourlyEmployee employee = new HourlyEmployee("Reetz", "Limonta", "123-45-6789", 20.0, 40.0);
+
+        System.out.println("Employee information obtained by get methods:");
+        System.out.printf("%n%s%n%s: $%,.2f%n%s: %.2f%n%s: $%,.2f%n",
+                employee.getFirstName() + " " + employee.getLastName(),
+                "hourly wage", employee.getWage(),
+                "hours worked", employee.getHours(),
+                "earnings", employee.earnings());
+
+        employee.setWage(25.0);
+        employee.setHours(50.0);
+
+        System.out.printf("%n%s:%n%n%s%n",
+                "Updated employee information", employee.toString());
+    }
+}
+
+//9.3 test
+       /**
        BasePlusCommissionEmployee employee = new BasePlusCommissionEmployee(
-   "John", "Doe", "123-45-6789", 5000, 0.04, 300);
+   "Eren", "Yeager", "133-50-8888", 5000, 0.04, 300);
    
 System.out.println(employee.toString());
 System.out.printf("Earnings: $%.2f%n", employee.earnings());
@@ -28,7 +48,7 @@ System.out.printf("Earnings: $%.2f%n", employee.earnings());
 
    }   
 }   
-
+**/
       
     /**
     // instantiate BasePlusCommissionEmployee object
